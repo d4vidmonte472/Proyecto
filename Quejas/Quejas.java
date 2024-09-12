@@ -51,4 +51,7 @@ public class Quejas {
     }
     
     
+    public void guardarQueja(){
+        
+    }
 }
