@@ -98,6 +98,11 @@
         <form >
             <label for="NumDoc"> Numero de Documento: </label>
             <input type="number" required title="Numero de Documento" placeholder="18106838" name="NumDoc" id="NumDoc"> Puede ingresar datos de facturas, recibos, contratos, etc.
+            <p>
+                <label for="fecha">Selecciona la fecha:</label><br>
+                <input type="date" id="fecha" name="fecha">
+            </p>
+            
         </form>
     </div>
     
