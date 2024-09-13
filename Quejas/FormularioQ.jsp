@@ -101,8 +101,16 @@
             <p>
                 <label for="fecha">Selecciona la fecha:</label><br>
                 <input type="date" id="fecha" name="fecha">
+            <p>
+            <p>
+                <label for="Detalle">Detalle de Queja:</label><br>
+                <textarea id="detalle" name="detalle" class="textarea-grande" placeholder="Escribe el detalle de queja aquí..."></textarea>
             </p>
-            
+            <p>
+                <label for="Solicitud">Solicitud:</laber><br>
+                <textarea id="solicitud" name="solicitud" class="textarea-grande" placeholder="Escribe su solicitud aquí..."></textarea>
+
+            </p>
         </form>
     </div>
     
