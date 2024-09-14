@@ -86,14 +86,41 @@
 
             <label for="municipio">Elija su municipio:</label>
             <select id="municipio" required name="municipio">
-
-
-            
             </select>
+            
+            <label for="SedeD">Sede de DIACO más cercana:</label>
+        <select id="SedeD" name="SedeD" required>
+            <option value="Baja Verapaz">-DIACO- BAJA VERAPAZ</option>
+            <option value="Central">CENTRAL</option>
+            <option value="Chimaltenango">CHIMALTENANGO - DIACO</option>
+            <option value="Cobán">COBÁN - DIACO</option>
+            <option value="Chiquimula">CHIQUIMULA - DIACO</option>
+            <option value="Escuintla">ESCUINTLA - DIACO</option>
+            <option value="Huehuetenango">HUEHUETENANGO - DIACO</option>
+            <option value="Izabal">IZABAL - DIACO</option>
+            <option value="Jutiapa">JUTIAPA - DIACO</option>
+            <option value="Petén">PETÉN - DIACO</option>
+            <option value="Quetzaltenango">QUETZALTENANGO - DIACO</option>
+            <option value="Quiché">QUICHÉ - DIACO</option>
+            <option value="Suchitepéquez">SUCHITEPÉQUEZ - DIACO</option>
+            <option value="Totonicapán">TOTONICAPÁN - DIACO</option>
+            <option value="Retalhuleu">RETALHULEU - DIACO</option>
+            <option value="Zacapa">ZACAPA - DIACO</option>
+            <option value="Sacatepéquez">SACATEPÉQUEZ - DIACO</option>
+            <option value="San Marcos">SAN MARCOS - DIACO</option>
+            <option value="Mixco">MIXCO - DIACO</option>
+            <option value="Villa Nueva">VILLA NUEVA - DIACO</option>
+            <option value="Jalapa">JALAPA - DIACO</option>
+            <option value="El Progreso">EL PROGRESO - DIACO</option>
+            <option value="Santa Rosa">SANTA ROSA - DIACO</option>
+</select>
+
+
 
         <input type="submit" value="EnviarQ">
     </form>
     </div>
+
     <div>
         <form >
             <label for="NumDoc"> Numero de Documento: </label>
