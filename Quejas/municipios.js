@@ -73,3 +73,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Seleccionamos los elementos del formulario
+    const form = document.getElementById('formC');
+    const email = document.getElementById('email');
+    const confirmEmail = document.getElementById('confirm-email');
+
+    // Evento que ocurre al intentar enviar el formulario
+    form.addEventListener('submit', function(event) {
+        // Verificamos si los correos coinciden
+        if (email.value !== confirmEmail.value) {
+            event.preventDefault();  // Evita que se envíe el formulario
+            alert("Los correos electrónicos no coinciden. Por favor, verifícalos.");
+
+            // Puedes también agregar una clase de error a los campos para resaltarlos
+            email.classList.add('error');
+            confirmEmail.classList.add('error');
+        } else {
+            // Si coinciden, eliminar cualquier clase de error
+            email.classList.remove('error');
+            confirmEmail.classList.remove('error');
+        }
+    });
+});
+

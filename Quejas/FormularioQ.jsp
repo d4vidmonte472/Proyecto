@@ -6,12 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consumidor</title>
+    <title>Formulario de queja DIACO</title>
     <link rel="stylesheet" href="stylrs.css">
+    <script src="validacion.js" defer></script>
 </head>
 <body>
-<div>
-    <form>
+<div class="dformC">
+    <form id="formC">
         <label for="nacionalidad">Elige una nacionalidad:</label>
         <select id="nacionalidad" name="nacionalidad" required>
             <option value="guatemalteco">Guatemalteco</option>
@@ -40,10 +41,15 @@
         <input type="text" required minlength="3" placeholder="Segundo Apellido" title="Segundo Apellido">
         <input type="text" minlength="3" required placeholder="Apellido de Casada" title="Apellido de Casada">
 
-        <p>Sexo:
-            <input type="radio" required name="sexo" value="h"> Hombre
-            <input type="radio" required name="sexo" value="m"> Mujer
-        </p>
+        <p>Sexo:</p>
+        <div class="radio-group">
+            <label>
+                Hombre<input type="radio" required name="sexo" value="h"> 
+            </label>
+            <label>
+                Mujer<input type="radio" required name="sexo" value="m"> 
+            </label>
+        </div>
 
         <label for="direccion">Dirección:</label>
         <input type="text" name="direccion" id="direccion" minlength="5" placeholder="Ingrese su dirección" required>
@@ -114,13 +120,31 @@
             <option value="Santa Rosa">SANTA ROSA - DIACO</option>
             </select>
         
-        <label for="TelefonoD">Telefono de Domicilio</label>
-        <input type="number" name="TelefonoD" id="TelefonoD" >
+        <label for="TelefonoD">Teléfono de Domicilio</label>
+        <input type="text" name="TelefonoD" id="TelefonoD" class="telefono">
 
-        <label for="Celular">Elija su departamento:</label>
-        <input type="number" name="Celular" id="Celular" >
+        <label for="Celular">Su Celular:</label>
+        <input type="text" name="Celular" id="Celular" class="telefono">
 
-        <input type="submit" value="EnviarQ">
+        <label for="Telr">Teléfono de referencia:</label>
+        <input type="text" name="Telr" id="Telr" class="telefono">
+
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="email" required placeholder="example@example.com">
+
+    <label for="confirm-email">Confirmar Correo Electrónico:</label>
+    <input type="email" id="confirm-email" name="confirm-email" required placeholder="example@example.com">
+
+    <label for="compI">Autorizo a publicar informacion:</label>
+    <div class="radio-group">
+    <label>
+    Si<input type="radio" id="comI" name="comI" required value="s">
+    </label>
+    <label>
+    No<input type="radio" id="comI" name="comI" required value="n"> 
+    </label>
+    <div>
+        <input type="submit" value="Enviar">
     </form>
     </div>
 
