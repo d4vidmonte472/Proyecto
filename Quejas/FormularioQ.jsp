@@ -24,8 +24,7 @@
             <option value="juridico">Jurídico</option>
         </select>
 
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" name="telefono" id="telefono" placeholder="Ingrese su teléfono" required>
+
 
         <p>NIT:
             <input type="number" required title="NIT" placeholder="18106838" name="NIT" id="NIT">
@@ -113,9 +112,13 @@
             <option value="Jalapa">JALAPA - DIACO</option>
             <option value="El Progreso">EL PROGRESO - DIACO</option>
             <option value="Santa Rosa">SANTA ROSA - DIACO</option>
-</select>
+            </select>
+        
+        <label for="TelefonoD">Telefono de Domicilio</label>
+        <input type="number" name="TelefonoD" id="TelefonoD" >
 
-
+        <label for="Celular">Elija su departamento:</label>
+        <input type="number" name="Celular" id="Celular" >
 
         <input type="submit" value="EnviarQ">
     </form>
