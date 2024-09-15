@@ -11,8 +11,9 @@
     <script src="validacion.js" defer></script>
 </head>
 <body>
-<div class="dformC">
-    <form id="formC">
+<form id="formularioQueja" method="POST" action="procesarQueja.jsp">
+    <div class="dformC">
+    
         <label for="nacionalidad">Elige una nacionalidad:</label>
         <select id="nacionalidad" name="nacionalidad" required>
             <option value="guatemalteco">Guatemalteco</option>
@@ -144,12 +145,73 @@
     No<input type="radio" id="comI" name="comI" required value="n"> 
     </label>
     <div>
-        <input type="submit" value="Enviar">
-    </form>
-    </div>
+    
+</div>
 
     <div>
-        <form >
+            <label for="empresa">Nombre de la Empresa:</label>
+            <input type="text" id="empresa" name="empresa" required minlength="3" placeholder="Nombre de la Empresa">
+        
+            <label for="razon-social">Razón Social:</label>
+            <input type="text" id="razon-social" name="razon-social" required minlength="3" placeholder="Razón Social">
+        
+            <label for="NIT">NIT:</label>
+            <input type="number" id="NIT" name="NIT" required placeholder="Ingrese el NIT">
+        
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required minlength="5" placeholder="Ingrese la dirección">
+        
+            <label for="zonaP">Zona:</label>
+            <select id="zonaP" name="zonaP" required>
+                <option value="sin-zona">Sin Zona</option>
+                <option value="zona-1">Zona 1</option>
+                <option value="zona-2">Zona 2</option>
+                <option value="zona-3">Zona 3</option>
+                <option value="zona-4">Zona 4</option>
+                <option value="zona-5">Zona 5</option>
+                <option value="zona-6">Zona 6</option>
+                <option value="zona-7">Zona 7</option>
+                <option value="zona-8">Zona 8</option>
+                <option value="zona-9">Zona 9</option>
+                <option value="zona-10">Zona 10</option>
+                <option value="zona-11">Zona 11</option>
+                <option value="zona-12">Zona 12</option>
+                <option value="zona-13">Zona 13</option>
+                <option value="zona-14">Zona 14</option>
+                <option value="zona-15">Zona 15</option>
+                <option value="zona-16">Zona 16</option>
+                <option value="zona-17">Zona 17</option>
+                <option value="zona-18">Zona 18</option>
+                <option value="zona-19">Zona 19</option>
+                <option value="zona-20">Zona 20</option>
+                <option value="zona-21">Zona 21</option>
+                <option value="zona-22">Zona 22</option>
+                <option value="zona-23">Zona 23</option>
+                <option value="zona-24">Zona 24</option>
+                <option value="zona-25">Zona 25</option>
+            </select>
+        
+            <label for="departamentoP">Departamento:</label>
+            <select id="departamentoP" name="departamentoP" required>
+            <option value=""></option>  
+            </select>
+        
+            <label for="municipioP"> Municipio de la empresa:</label>
+            <select id="municipioP" required name="municipioP">
+            </select>
+        
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required minlength="8" placeholder="Ingrese el teléfono">
+        
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required placeholder="example@example.com">
+        
+        
+    </div>
+
+</div>
+    <div>
+        
             <label for="NumDoc"> Numero de Documento: </label>
             <input type="number" required title="Numero de Documento" placeholder="18106838" name="NumDoc" id="NumDoc"> Puede ingresar datos de facturas, recibos, contratos, etc.
             <p>
@@ -165,9 +227,11 @@
                 <textarea id="solicitud" name="solicitud" class="textarea-grande" placeholder="Escribe su solicitud aquí..."></textarea>
 
             </p>
-        </form>
+        
     </div>
-    
+    <input type="submit" value="Enviar">
+</form>
+    <script src="municipiosP.js"></script>
     <script src="municipios.js"></script>
 </body>
 </html>
