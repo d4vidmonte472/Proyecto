@@ -1,3 +1,5 @@
+
+
 public class Consumidor {
 
 
@@ -10,7 +12,6 @@ public class Consumidor {
         String apellido1;
         String apellido2;
         String apellidoCasada;
-        String genero;
         String direccion;
         String zona;
         String departamento;
@@ -36,7 +37,6 @@ public Consumidor(String nacionalidad, String tipoConsumidor, int nit, int dpi, 
     this.apellido1 = apellido1;
     this.apellido2 = apellido2;
     this.apellidoCasada = apellidoCasada;
-    this.genero = genero;
     this.direccion = direccion;
     this.zona = zona;
     this.departamento = departamento;
@@ -78,16 +78,12 @@ public String getApellido1() {
     return apellido1;
 }
 
-public String getApelldo2(){
+public String getApellido2(){
     return apellido2;
 }
 
 public String getApellidoCasada() {
     return apellidoCasada;
-}
-
-public String getGenero() {
-    return genero;
 }
 
 public String getDireccion() {
@@ -171,9 +167,6 @@ public void setApellidoCasada(String apellidoCasada) {
     this.apellidoCasada = apellidoCasada;
 }
 
-public void setGenero(String genero) {
-    this.genero = genero;
-}
 
 public void setDireccion(String direccion) {
     this.direccion = direccion;

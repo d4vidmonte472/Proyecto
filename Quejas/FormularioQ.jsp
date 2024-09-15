@@ -11,7 +11,7 @@
     <script src="validacion.js" defer></script>
 </head>
 <body>
-<form id="formularioQueja" method="POST" action="procesarQueja.jsp">
+<form id="formularioQueja" method="POST" action="GuardarConsumidor.jsp">
     <div class="dformC">
     
         <label for="nacionalidad">Elige una nacionalidad:</label>
@@ -33,14 +33,14 @@
         </p>
 
         <p>NO. DOCUMENTO DE IDENTIFICACIÓN:
-            <input type="number" required title="DPI">
+            <input type="number" required title="DPI" name="DPI">
         </p>
 
-        <input type="text" required minlength="3" placeholder="Primer Nombre" title="Primer Nombre">
-        <input type="text" minlength="3" placeholder="Segundo Nombre" title="Segundo Nombre" required>
-        <input type="text" required minlength="3" placeholder="Primer Apellido" title="Primer Apellido">
-        <input type="text" required minlength="3" placeholder="Segundo Apellido" title="Segundo Apellido">
-        <input type="text" minlength="3" required placeholder="Apellido de Casada" title="Apellido de Casada">
+        <input type="text" required minlength="3" placeholder="Primer Nombre" title="Primer Nombre" name="PrimerNombre">
+        <input type="text" minlength="3" placeholder="Segundo Nombre" title="Segundo Nombre" required name="SegundoNombre">
+        <input type="text" required minlength="3" placeholder="Primer Apellido" title="Primer Apellido" name="PrimerApellido">
+        <input type="text" required minlength="3" placeholder="Segundo Apellido" title="Segundo Apellido" name="SegundoApellido">
+        <input type="text" minlength="3" required placeholder="Apellido de Casada" title="Apellido de Casada" name="ApellidoCasada">
 
         <p>Sexo:</p>
         <div class="radio-group">
