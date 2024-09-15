@@ -1,4 +1,4 @@
-<%@ page import="java.io.*, org.apache.poi.xssf.usermodel.*, java.util.*, java.io.FileOutputStream" %>
+<%@ page import="java.io.*, org.apache.poi.xssf.usermodel.*, org.apache.poi.ss.usermodel.*" %>
 <%@ page import = "Consumidor" %>
 
 
@@ -8,7 +8,7 @@ String nacionalidad = request.getParameter("nacionalidad");
 String tipoConsumidor = request.getParameter("contribuyente");
 int nit = Integer.parseInt(request.getParameter("NIT"));
 int dpi = Integer.parseInt(request.getParameter("dpi"));
-String nombre1 = request.getParameter("PrimerNombre";)
+String nombre1 = request.getParameter("PrimerNombre");
 String nombre2 = request.getParameter("SegundoNombre");
 String apellido1 = request.getParameter("PrimerApellido");
 String apellido2 = request.getParameter("SegundoApellido");
@@ -19,9 +19,9 @@ String zona = request.getParameter("zona");
 String departamento = request.getParameter("departamento");
 String municipio = request.getParameter("municipio");
 String sede = request.getParameter("SedeD");
-int telDom = request.getParameter("TelefonoD");
-int tel = request.getParameter("Celular");
-int telRef = request.getParameter("Telr");
+int telDom = Integer.parseInt(request.getParameter("TelefonoD"));
+int tel = Integer.parseInt(request.getParameter("Celular"));
+int telRef = Integer.parseInt(request.getParameter("Telr"));
 String correo = request.getParameter("email");
 String autorizacion = request.getParameter("comI");
 
@@ -29,8 +29,7 @@ Consumidor consumidor = new Consumidor(nacionalidad, tipoConsumidor, nit, dpi, n
 
 
 String rutaArchivo = application.getRealPath("/") + "consumidores.xlsx";
-File archivoExcel = new File(C:\Program Files (x86)\Apache Software Foundation\Tomcat 10.1\webapps\Proyecto\Proyecto\Proyecto\Quejas\Consumidor.xlsx);
-
+File archivoExcel = new File("C:\\Program Files (x86)\\Apache Software Foundation\\Tomcat 10.1\\webapps\\Proyecto\\Proyecto\\Proyecto\\Quejas\\Consumidor.xlsx");
 XSSFWorkbook workbook;
 XSSFSheet sheet;
 

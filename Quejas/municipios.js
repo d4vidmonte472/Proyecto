@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const departamentoSelect = document.getElementById('departamento');
     const municipioSelect = document.getElementById('municipio');
-    const departamentoPSelect = document.getElementById('departamentoP');
-    const municipioPSelect = document.getElementById('municipioP');
 
     async function loadCSV(file) {
         const response = await fetch(file);
@@ -28,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function populateDepartamentos(departamentos, selectElement) {
-        selectElement.innerHTML = '<option value="">Selecciona un departamento</option>'; // Para limpiar opciones
+        selectElement.innerHTML = '<option value="">Selecciona un departamento</option>'; // Limpiar opciones
         departamentos.forEach(dep => {
             const option = document.createElement('option');
             option.value = dep.id;
@@ -56,24 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Departamentos:', departamentos);  // Depuración
             console.log('Municipios:', municipios);  // Depuración
 
-            // Poblar ambos selectores de departamentos
+            // Poblar el selector de departamentos
             populateDepartamentos(departamentos, departamentoSelect);
-            populateDepartamentos(departamentos, departamentoPSelect);
 
-            // Evento para el primer selector de departamento
+            // Evento para el selector de departamento
             departamentoSelect.addEventListener('change', () => {
                 const selectedDepartamento = departamentoSelect.value;
                 const filteredMunicipios = municipios.filter(m => m.idDepartamento === selectedDepartamento);
                 console.log('Municipios filtrados (departamento):', filteredMunicipios);  // Depuración
                 populateMunicipios(filteredMunicipios, municipioSelect);
-            });
-
-            // Evento para el segundo selector de departamento (departamentoP)
-            departamentoPSelect.addEventListener('change', () => {
-                const selectedDepartamentoP = departamentoPSelect.value;
-                const filteredMunicipiosP = municipios.filter(m => m.idDepartamento === selectedDepartamentoP);
-                console.log('Municipios filtrados (departamentoP):', filteredMunicipiosP);  // Depuración
-                populateMunicipios(filteredMunicipiosP, municipioPSelect);
             });
         })
         .catch(error => console.error('Error al cargar los archivos CSV:', error));
