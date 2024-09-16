@@ -1,39 +1,36 @@
 <%@ page import="java.io.*, org.apache.poi.xssf.usermodel.*, org.apache.poi.ss.usermodel.*" %>
-<%@ page import = "Consumidor" %>
-
-
+<%@ page import="com.example.model.Consumidor" %>
 
 <%
-String nacionalidad = request.getParameter("nacionalidad");
-String tipoConsumidor = request.getParameter("contribuyente");
-int nit = Integer.parseInt(request.getParameter("NIT"));
-int dpi = Integer.parseInt(request.getParameter("dpi"));
-String nombre1 = request.getParameter("PrimerNombre");
-String nombre2 = request.getParameter("SegundoNombre");
-String apellido1 = request.getParameter("PrimerApellido");
-String apellido2 = request.getParameter("SegundoApellido");
-String apellidoCasada = request.getParameter("ApellidoCasada");
-String sexo = request.getParameter("sexo");
-String direccion = request.getParameter("direccion");
-String zona = request.getParameter("zona");
-String departamento = request.getParameter("departamento");
-String municipio = request.getParameter("municipio");
-String sede = request.getParameter("SedeD");
-int telDom = Integer.parseInt(request.getParameter("TelefonoD"));
-int tel = Integer.parseInt(request.getParameter("Celular"));
-int telRef = Integer.parseInt(request.getParameter("Telr"));
-String correo = request.getParameter("email");
-String autorizacion = request.getParameter("comI");
+    String nacionalidad = request.getParameter("nacionalidad");
+    String tipoConsumidor = request.getParameter("contribuyente");
+    int nit = Integer.parseInt(request.getParameter("NIT"));
+    int dpi = Integer.parseInt(request.getParameter("dpi"));
+    String nombre1 = request.getParameter("PrimerNombre");
+    String nombre2 = request.getParameter("SegundoNombre");
+    String apellido1 = request.getParameter("PrimerApellido");
+    String apellido2 = request.getParameter("SegundoApellido");
+    String apellidoCasada = request.getParameter("ApellidoCasada");
+    String sexo = request.getParameter("sexo");
+    String direccion = request.getParameter("direccion");
+    String zona = request.getParameter("zona");
+    String departamento = request.getParameter("departamento");
+    String municipio = request.getParameter("municipio");
+    String sede = request.getParameter("SedeD");
+    int telDom = Integer.parseInt(request.getParameter("TelefonoD"));
+    int tel = Integer.parseInt(request.getParameter("Celular"));
+    int telRef = Integer.parseInt(request.getParameter("Telr"));
+    String correo = request.getParameter("email");
+    String autorizacion = request.getParameter("comI");
 
-Consumidor consumidor = new Consumidor(nacionalidad, tipoConsumidor, nit, dpi, nombre1, nombre2, apellido1, apellido2, apellidoCasada, direccion, zona, departamento, municipio, sede, telDom, tel, telRef, correo, autorizacion, sexo);
+    Consumidor consumidor = new Consumidor(nacionalidad, tipoConsumidor, nit, dpi, nombre1, nombre2, apellido1, apellido2, apellidoCasada, direccion, zona, departamento, municipio, sede, telDom, tel, telRef, correo, autorizacion, sexo);
 
+    String rutaArchivo = application.getRealPath("/") + "consumidores.xlsx";
+    File archivoExcel = new File(rutaArchivo);
+    XSSFWorkbook workbook;
+    XSSFSheet sheet;
 
-String rutaArchivo = application.getRealPath("/") + "consumidores.xlsx";
-File archivoExcel = new File("C:\\Program Files (x86)\\Apache Software Foundation\\Tomcat 10.1\\webapps\\Proyecto\\Proyecto\\Proyecto\\Quejas\\Consumidor.xlsx");
-XSSFWorkbook workbook;
-XSSFSheet sheet;
-
-if (archivoExcel.exists()) {
+    if (archivoExcel.exists()) {
         FileInputStream file = new FileInputStream(archivoExcel);
         workbook = new XSSFWorkbook(file);
         sheet = workbook.getSheetAt(0); // Usa la primera hoja
@@ -62,9 +59,9 @@ if (archivoExcel.exists()) {
         headerRow.createCell(17).setCellValue("Correo");
         headerRow.createCell(18).setCellValue("Autorizado");
         headerRow.createCell(19).setCellValue("Sexo");
+    }
 
-
-int fila = sheet.getLastRowNum() + 1;
+    int fila = sheet.getLastRowNum() + 1;
     XSSFRow row = sheet.createRow(fila);
     row.createCell(0).setCellValue(consumidor.getNacionalidad());
     row.createCell(1).setCellValue(consumidor.getTipoConsumidor());
@@ -87,13 +84,8 @@ int fila = sheet.getLastRowNum() + 1;
     row.createCell(18).setCellValue(consumidor.getAutorizacion());
     row.createCell(19).setCellValue(consumidor.getSexo());
 
-FileOutputStream outputStream = new FileOutputStream(archivoExcel);
+    FileOutputStream outputStream = new FileOutputStream(archivoExcel);
     workbook.write(outputStream);
     outputStream.close();
-
-    }
-
-
-
-
+    workbook.close();
 %>
