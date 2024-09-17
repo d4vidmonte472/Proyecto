@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-
+filePath = consumidores.csv; 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +11,7 @@
     <script src="validacion.js" defer></script>
 </head>
 <body>
-<form id="formularioQueja" method="POST" action="GuardarConsumidor.jsp">
+<form id="formularioQueja" method="POST" action="consumidores.csv">
     <div class="dformC">
     
         <label for="nacionalidad">Elige una nacionalidad:</label>
@@ -229,7 +229,7 @@
             </p>
         
     </div>
-    <input type="submit" value="Enviar">
+    <input type="submit" value="Enviar" >
 </form>
     <script src="municipiosP.js"></script>
     <script src="municipios.js"></script>
