@@ -1,0 +1,42 @@
+p{
+    color: blue
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 600px; /* Puedes ajustar el ancho máximo según sea necesario */
+        margin: 0 auto; /* Centra el formulario en la página */
+    }
+    label, input, select, p {
+        margin-bottom: 1em; /* Espacio entre los campos */
+    }
+    input, select {
+        width: 100%; /* Hace que los campos de entrada y selección se ajusten al ancho del formulario */
+        padding: 0.5em; /* Espacio interno en los campos */
+        box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+    }
+    /* Opcional: Añade un estilo básico para el botón de envío */
+    input[type="submit"] {
+        background-color: #4CAF50; /* Color de fondo verde */
+        color: white; /* Color del texto blanco */
+        border: none; /* Sin borde */
+        padding: 1em; /* Espacio interno */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049; /* Color de fondo al pasar el cursor */
+    }
+    .radio-group label {
+        display: flex;
+        align-items: center; /* Alinea el texto con el botón de radio */
+        margin-right: 1em; /* Espacio entre los botones de radio */
+    }
+    .radio-group input[type="radio"] {
+        margin-right: 0.5em; /* Espacio entre el botón de radio y el texto */
+    }

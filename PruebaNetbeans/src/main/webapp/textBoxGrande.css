@@ -1,0 +1,16 @@
+.textarea-grande {
+    width: 200%; /* Ancho del área de texto */
+    height: 200px; /* Altura del área de texto */
+    padding: 50px; /* Espacio interno */
+    font-size: 18px; /* Tamaño de la fuente */
+    border: 2px solid #ccc; /* Borde del área */
+    border-radius: 10px; /* Bordes redondeados */
+    box-sizing: border-box; /* Asegura que padding y border estén dentro del tamaño total */
+    resize: none;
+}
+
+/* Cambia el borde cuando el área de texto está enfocada */
+.textarea-grande:focus {
+    border-color: #4CAF50; /* Cambia el color del borde cuando se enfoca */
+    outline: none; /* Elimina el borde exterior predeterminado */
+}
